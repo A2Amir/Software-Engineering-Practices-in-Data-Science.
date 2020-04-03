@@ -126,8 +126,32 @@ In-line comments are text following hash symbols throughout your code. They are 
 
 *	One way comments are used is to document the major steps of complex code to help readers follow. Then, you may not have to understand the code to follow what it does. However, others would argue that this is using comments to justify bad code, and that if code requires comments to follow, it is a sign refactoring is needed.
      
-                                                                                     c=a+b # adding two variables (In-line Comment)
+                                        c=a+b # adding two variables (In-line Comment)
                                       
 * Comments are valuable for explaining where code cannot. For example, the history behind why a certain method was implemented a specific way. Sometimes an unconventional or seemingly arbitrary approach may be applied because of some obscure external variable causing side effects. These things are difficult to explain with code.
 
 ### Docstrings
+
+Docstring, or documentation strings, are valuable pieces of documentation that explain the functionality of any function or module in your code. Ideally, each of your functions should always have a docstring. 
+Docstrings are surrounded by triple quotes. The first line of the docstring is a brief explanation of the function's purpose (see example below). 
+The next element of a docstring is an explanation of the function's arguments. you list the arguments, state their purpose, and state what types the arguments should be. Finally it is common to provide some description of the output of the function. Every piece of the docstring is optional; however, doc strings are a part of good coding practice.
+
+~~~python
+
+def population_density(population, land_area):
+    """Calculate the population density of an area.
+
+    Args:
+    population: int. The population of the area
+    land_area: int or float. This function is unit-agnostic, if you pass in values in terms of square km or square miles the function will return a density in those units.
+
+    Returns:
+    population_density: population/land_area. The population density of a 
+    particular area.
+    """
+    return population / land_area
+
+~~~
+Check these links to get more information:
+*	[PEP 257 - Docstring Conventions](https://www.python.org/dev/peps/pep-0257/) 
+* [NumPy Docstring Guide](https://numpydoc.readthedocs.io/en/latest/format.html)
