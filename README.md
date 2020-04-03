@@ -3,6 +3,7 @@
  This Repo is about the following practices of software engineering and how they apply in data science.
 
 <b>
+ 
 1.	Writing clean 
  
 2.	Writing modular code
@@ -110,3 +111,23 @@ To see a few examples of inefficient code, and practice refactoring to optimize 
 * [Optimizing - Holiday Gifts](https://github.com/A2Amir/Software-Engineering-Practices-/blob/master/Code/optimizing_code_holiday_gifts.ipynb)
 
 # 5.	Documentation
+
+DOCUMENTATION is additional text or illustrated information that comes with or is embedded in the code of software. It is helpful for clarifying complex parts of code, making your code easier to navigate, and quickly conveying how and why different components of your program are used.
+
+Several types of documentation can be added at different levels of your program:
+
+* In-line Comments - line level
+*	Docstrings - module and function level
+* Project Documentation - project level
+
+### In-line Comments
+
+In-line comments are text following hash symbols throughout your code. They are used to explain parts of your code, and really help future contributors understand your work.
+
+*	One way comments are used is to document the major steps of complex code to help readers follow. Then, you may not have to understand the code to follow what it does. However, others would argue that this is using comments to justify bad code, and that if code requires comments to follow, it is a sign refactoring is needed.
+     
+                                                                                     c=a+b # adding two variables (In-line Comment)
+                                      
+* Comments are valuable for explaining where code cannot. For example, the history behind why a certain method was implemented a specific way. Sometimes an unconventional or seemingly arbitrary approach may be applied because of some obscure external variable causing side effects. These things are difficult to explain with code.
+
+### Docstrings
