@@ -56,7 +56,7 @@ For more guidelines, check out [the code layout section of PEP 8](https://www.py
 **MODULAR:** logically broken up into functions and modules. An important characteristic of production quality code that makes your code more organized, efficient, and reusable. Modularizing your code or breaking up your code into logical functions and modules really helps you organize your program in cleaner and more efficient.
 
 <p align="right">
-<img src="./img/1.png" alt="Modular Code" />
+<img src="./imgs/1.png" alt="Modular Code"  width="600" height="400"/>
 <p align="center">
  
  **MODULE** is a file. Modules allow code to be reused by encapsulating them into files that can be imported into other files.
@@ -88,3 +88,25 @@ Arbitrary variable names in general functions can actually make the code more re
 Try to use no more than three arguments when possible. This is not a hard rule and there are times it is more appropriate to use many parameters. But in many cases, it's more effective to use fewer arguments. Remember we are modularizing to simplify our code and make it more efficient to work with. If your function has a lot of parameters, you may want to rethink how you are splitting this up.
 
 # 3.	Refactoring Code
+
+REFACTORING means restructuring your code to improve its internal structure, without changing its external functionality. This gives you a chance to clean and modularize your program after you've got it working.
+
+* Since it isn't easy to write your best code while you're still trying to just get it working, allocating time to do this is essential to producing high quality code. Despite the initial time and effort required, this really pays off by speeding up your development time in the long run.
+* You become a much stronger programmer when you're constantly looking to improve your code. The more you refactor, the easier it will be to structure and write good code the first time.
+
+To exercise refactoring check this [notebook](https://github.com/A2Amir/Software-Engineering-Practices-/blob/master/Code/refactor_wine_quality.ipynb).
+
+# 4.	Efficient Code
+
+Knowing how to write code that runs efficiently is another essential skill in software development. Optimizing code to be more efficient can mean making it:
+
+* Execute faster
+* Take up less space in memory/storage
+
+The project you're working on would determine which of these is more important to optimize for your company or product. When we are performing lots of different transformations on large amounts of data, this can make orders of magnitudes of difference in performance.
+To see a few examples of inefficient code, and practice refactoring to optimize their performance check these exercises below.
+
+* [Optimizing - Common Books](https://github.com/A2Amir/Software-Engineering-Practices-/blob/master/Code/optimizing_code_common_books%20.ipynb)
+* [Optimizing - Holiday Gifts](https://github.com/A2Amir/Software-Engineering-Practices-/blob/master/Code/optimizing_code_holiday_gifts.ipynb)
+
+# 5.	Documentation
