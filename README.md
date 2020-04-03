@@ -171,4 +171,34 @@ Here are a few READMEs from some popular projects:
 
 # 6.	Version Control in Data Science
 
+you might already know a bit about version control. But if you don't, a handy trick I've learned is to try reading the words in reverse - so "version control" would become "control version"! So a Version Control System is just software that helps you control (or manage) the different versions...of something.
+
+There are [a number of Version Control Systems](https://en.wikipedia.org/wiki/List_of_version_control_software). This alone should prove that version control is incredibly important. Three of the most popular version control systems are:
+•	[Git](https://git-scm.com/)
+•	[Subversion](https://subversion.apache.org/)
+•	[Mercurial](https://www.mercurial-scm.org/)
+
+There are two main types of version control system models:
+
+*	the centralized model - all users connect to a central, master repository
+*	the distributed model - each user has the entire repository on their computer
+
+the main point of a version control system is to help you maintain a detailed history of the project as well as the ability to work on different versions of it. Having a detailed history of a project is important because it lets you see the progress of the project over time. If needed, you can also jump back to any point in the project to recover data or files.
+
+Using commands(like below) in Git is a few ways of version control that can be used in data science on a team.
+
+* git commit: To commit messages
+* git checkout:To switch branches
+* git pull: to pull changes
+* git merge: to megre branches
+* git push: to push changes up
+
+There's a great article on a successful git branching strategy that you should really read [here](http://nvie.com/posts/a-successful-git-branching-model/). Version control in data science can be tricky, because there are many pieces involved that can be hard to track, such as large amounts of data, model versions, seeds, hyperparameters, etc.
+
+Here are some resources for useful ways and tools for managing versions of models and large data. These are here for you to explore
+
+* [How to Version Control Your Production Machine Learning Models](https://blog.algorithmia.com/how-to-version-control-your-production-machine-learning-models/)
+* [Versioning Data Science](https://shuaiw.github.io/2017/07/30/versioning-data-science.html)
+
+# 7.	Testing
 
