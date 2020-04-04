@@ -245,6 +245,7 @@ TEST DRIVEN DEVELOPMENT means writing tests before you write the code that’s b
 * Tests can check for all the different scenarios and edge cases you can think of, before even starting to write your function. This way, when you do start implementing your function, you can run this test to get immediate feedback on whether it works or not in all the ways you can think of, as you tweak your function. 
 
 * When refactoring or adding to your code, tests help you assured that the rest of your code didn't break while you were making those changes. Tests also helps ensure that your function behavior is repeatable, regardless of external parameters, such as hardware and time.
+
 Test driven development for data science is relatively new and has a lot of experimentation and breakthroughs appearing, which you can learn more about in the resources below.
 
 * [Data Science TDD](https://www.linkedin.com/pulse/data-science-test-driven-development-sam-savage/)
@@ -253,4 +254,91 @@ Test driven development for data science is relatively new and has a lot of expe
 * [Testing Your Code](http://docs.python-guide.org/en/latest/writing/tests/) 
 
 # 8.	Logging
+
+Logging is valuable for understanding the events that occur while running your program. For example, if you run your model over night and see that it's producing ridiculous results the next day, log messages can really help you understand more about the context in which this occurred. Lets learn about the qualities that make a log message effective.
+
+Logging is the process of recording messages to describe events that have occurred while running your software. Let's take a look at a few examples, and learn tips for writing good log messages.
+
+**Tip: Be professional and clear**
+
+    Bad: Hmmm... this isn't working???
+    Bad: idk.... :(
+    Good: Couldn't parse file
+
+**Tip: Be concise and use normal capitalization**
+
+    Bad: Start Product Recommendation Process
+    Bad: We have completed the steps necessary and will now proceed with the recommendation process for the records in our product database.
+    Good: Generating product recommendations.
+    
+**Tip: Choose the appropriate level for logging**
+
+DEBUG - level you would use for anything that happens in the program.
+ERROR - level to record any error that occurs
+INFO - level to record all actions that are user-driven or system specific, such as regularly scheduled operations
+
+~~~ python
+
+import logging
+logging.basicConfig(filename='example.log',level=logging.DEBUG)
+logging.debug('This message should go to the log file')
+logging.info('So should this')
+logging.warning('And this, too')
+~~~
+or
+~~~python
+import logging
+
+name = 'John'
+
+logging.error('%s raised an error', name)
+~~~
+
+**Tip: Provide any useful information** 
+
+    Bad: Failed to read location data
+    Good: Failed to read location data: store_id 832497
+
+# 9. Code Reviews
+
+
+Code reviews benefit everyone in a team to promote best programming practices and prepare code for production. Let's go over what to look for in a code review and some tips on how to conduct one.
+
+* [Code Review](https://github.com/lyst/MakingLyst/tree/master/code-reviews)
+* [Code Review Best Practices](https://www.kevinlondon.com/2015/05/05/code-review-best-practices.html)
+
+### Questions to Ask Yourself When Conducting a Code Review
+
+First, let's look over some of the questions we may ask ourselves while reviewing code. These are simply from the concepts I've covered in this Repo!
+
+**Is the code clean and modular?**
+* Can I understand the code easily?
+* Does it use meaningful names and whitespace?
+* Is there duplicated code?
+* Can you provide another layer of abstraction?
+* Is each function and module necessary?
+* Is each function or module too long?
+
+**Is the code efficient?**
+*	Are there loops or other steps we can vectorize?
+*	Can we use better data structures to optimize any steps?
+*	Can we shorten the number of calculations needed for any steps?
+*	Can we use generators or multiprocessing to optimize any steps?
+
+**Is documentation effective?**
+*	Are in-line comments concise and meaningful?
+*	Is there complex code that's missing documentation?
+*	Do function use effective docstrings?
+*	Is the necessary project documentation provided?
+
+**Is the code well tested?**
+*	Does the code high test coverage?
+*	Do tests check for interesting cases?
+*	Are the tests readable?
+*	Can the tests be made more efficient?
+
+**Is the logging effective?**
+*	Are log messages clear, concise, and professional?
+*	Do they include all relevant and useful information?
+*	Do they use the appropriate logging level?
 
